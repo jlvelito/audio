@@ -2,11 +2,97 @@ body, html {
   width: 100%;
   height: 100%;
   font-family: "Proxima Nova Lt";
-  color: #000; }
+  color: #000;
+  background: #f7f8f6; }
 
 h1, .upperbold {
   font-family: "Futura PT Bold";
-  font-weight: normal; }
+  font-weight: normal;
+  margin: 0;
+  padding: 0; }
 
-h2, h3, h4, h5, h6 {
-  font-weight: normal; }
+h2, h3, h4, h5, h6, p {
+  font-weight: normal;
+  margin: 0;
+  padding: 0; }
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box; }
+
+.initial {
+  padding: 0 80px; }
+  .initial h1 {
+    font-size: 120px;
+    letter-spacing: -7px;
+    text-indent: -7px;
+    line-height: 100%; }
+  .initial h2 {
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .initial__contents {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%); }
+  .initial__desc {
+    line-height: 2.6em;
+    font-size: 16px;
+    letter-spacing: 1.9px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 5px;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .initial__desc:before {
+      display: block;
+      height: 0;
+      width: 0;
+      transform: translateX(50%);
+      border-top: 3px solid #000;
+      content: "";
+      -webkit-transition: all 0.5s ease 0.5s;
+      -moz-transition: all 0.5s ease 0.5s;
+      -ms-transition: all 0.5s ease 0.5s;
+      -o-transition: all 0.5s ease 0.5s;
+      transition: all 0.5s ease 0.5s; }
+  .initial.active .initial__desc {
+    opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .initial.active .initial__desc:before {
+      width: 100%;
+      transform: translateX(0);
+      -webkit-transition: all 0.5s ease 0.5s;
+      -moz-transition: all 0.5s ease 0.5s;
+      -ms-transition: all 0.5s ease 0.5s;
+      -o-transition: all 0.5s ease 0.5s;
+      transition: all 0.5s ease 0.5s; }
+  .initial.active h2 {
+    opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }

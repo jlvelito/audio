@@ -2,19 +2,109 @@ $font-titles: 'Futura PT Bold';
 $font-family: 'Proxima Nova Lt';
 $size: 10px;
 $black: #000;
+$gray: #f7f8f6;
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
 
 body,html{
   width: 100%;
   height: 100%;
   font-family: $font-family;
   color: $black;
+  background: $gray;
 }
 
 h1, .upperbold{
   font-family: $font-titles;
   font-weight: normal;
+  margin: 0;
+  padding: 0;
 }
 
-h2,h3,h4,h5,h6{
+h2,h3,h4,h5,h6,p{
   font-weight: normal;
+  margin: 0; padding: 0;
+}
+
+.wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.section{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.initial{
+  padding: 0 8 * $size;
+
+  h1{
+    font-size: 12 * $size;
+    letter-spacing: -0.7 * $size;
+    text-indent: -0.7 * $size;
+    line-height: 100%;
+  }
+
+  h2{
+    letter-spacing: 0.32 * $size;
+    text-transform: uppercase;
+    opacity: 0;
+    @include transition(all .3s ease);
+  }
+
+  &__contents{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__desc{
+    line-height: 2.6em;
+    font-size: 1.6 * $size;
+    letter-spacing: 0.19 * $size;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 0.5 * $size;
+    opacity: 0;
+    @include transition(all .5s ease);
+
+    &:before{
+      display: block;
+      height: 0;
+      width: 0;
+      transform: translateX(50%);
+      border-top: 0.3 * $size solid $black;
+      content: "";
+      @include transition(all .5s ease .5s);
+    }
+  }
+
+  &.active{
+    .initial__desc{
+      opacity: 1;
+      @include transition(all .5s ease);
+
+            &:before{
+              width: 100%;
+              transform: translateX(0);
+              @include transition(all .5s ease .5s);
+            }
+    }
+
+    h2{
+      opacity: 1;
+      @include transition(all .5s ease);
+    }
+  }
 }
