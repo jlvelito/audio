@@ -29,7 +29,7 @@ h2, h3, h4, h5, h6, p {
   box-sizing: border-box; }
 
 .initial {
-  padding: 0 15%; }
+  padding: 0; }
   .initial h1 {
     font-size: 120px;
     letter-spacing: -7px;
@@ -46,9 +46,19 @@ h2, h3, h4, h5, h6, p {
     transition: all 0.3s ease; }
   .initial__contents {
     position: absolute;
-    width: 100%;
+    width: 300px;
     top: 50%;
-    transform: translateY(-50%); }
+    left: 50%;
+    transform: translate(-110%, -50%); }
+    @media (max-width: 560px) {
+      .initial__contents {
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        text-align: center;
+        padding-top: 40px; } }
   .initial__desc {
     line-height: 2.6em;
     font-size: 16px;
@@ -102,6 +112,17 @@ h2, h3, h4, h5, h6, p {
     top: 50%;
     left: 50%;
     transform: translateY(-50%); }
+    @media (max-width: 768px) {
+      .initial .container__svg {
+        width: 350px; } }
+    @media (max-width: 560px) {
+      .initial .container__svg {
+        width: 70%;
+        position: relative;
+        padding-top: 30px;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0); } }
     .initial .container__svg .wire-wrapper, .initial .container__svg .wire-wrapper-2 {
       fill: none;
       stroke: #000;

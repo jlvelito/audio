@@ -46,7 +46,7 @@ h2,h3,h4,h5,h6,p{
 }
 
 .initial{
-  padding: 0 15%;
+  padding: 0;
 
   h1{
     font-size: 12 * $size;
@@ -64,9 +64,20 @@ h2,h3,h4,h5,h6,p{
 
   &__contents{
     position: absolute;
-    width: 100%;
+    width: 30 * $size;;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-110%, -50%);
+
+    @media (max-width: 560px){
+      position: relative;
+      width: 100%;
+      top: 0;
+      left: 0;
+      transform: translate(0,0);
+      text-align: center;
+      padding-top: 4 * $size;
+    }
   }
 
   &__desc{
@@ -115,6 +126,19 @@ h2,h3,h4,h5,h6,p{
     top: 50%;
     left: 50%;
     transform: translateY(-50%);
+
+    @media (max-width: 768px){
+      width: 35 * $size;
+    }
+
+    @media (max-width: 560px){
+      width: 70%;
+      position: relative;
+      padding-top: 3 * $size;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%,0)
+    }
 
     .wire-wrapper, .wire-wrapper-2 {
       fill: none;
