@@ -3,7 +3,7 @@ body, html {
   height: 100%;
   font-family: "Proxima Nova Lt";
   color: #000;
-  background: #f7f8f6; }
+  background: #f3f2f1; }
 
 h1, .upperbold {
   font-family: "Futura PT Bold";
@@ -29,7 +29,7 @@ h2, h3, h4, h5, h6, p {
   box-sizing: border-box; }
 
 .initial {
-  padding: 0 80px; }
+  padding: 0 15%; }
   .initial h1 {
     font-size: 120px;
     letter-spacing: -7px;
@@ -96,3 +96,15 @@ h2, h3, h4, h5, h6, p {
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease; }
+  .initial .container__svg {
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%); }
+    .initial .container__svg .wire-wrapper, .initial .container__svg .wire-wrapper-2 {
+      fill: none;
+      stroke: #000;
+      stroke-width: 2;
+      width: 100%;
+      max-height: 100%; }

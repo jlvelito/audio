@@ -2,7 +2,7 @@ $font-titles: 'Futura PT Bold';
 $font-family: 'Proxima Nova Lt';
 $size: 10px;
 $black: #000;
-$gray: #f7f8f6;
+$gray: #f3f2f1;
 
 @mixin transition($args...) {
   -webkit-transition: $args;
@@ -46,7 +46,7 @@ h2,h3,h4,h5,h6,p{
 }
 
 .initial{
-  padding: 0 8 * $size;
+  padding: 0 15%;
 
   h1{
     font-size: 12 * $size;
@@ -107,4 +107,24 @@ h2,h3,h4,h5,h6,p{
       @include transition(all .5s ease);
     }
   }
+
+  .container__svg{
+
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+
+    .wire-wrapper, .wire-wrapper-2 {
+      fill: none;
+      stroke: $black;
+      stroke-width: 2;
+      width: 100%;
+      max-height: 100%;
+    }
+
+  }
+
+
 }

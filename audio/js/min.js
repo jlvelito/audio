@@ -20,11 +20,21 @@ $(document).ready(function() {
   //   mySound.pause();
   // });
 
+  var mySoundInit = new Audio('files/flick.wav');
+
 
   $('#initial__animation').shuffleLetters({
     callback: function() {
       $('#initial').addClass('active');
+      mySoundInit.play();
     }
   });
+
+  if ($('.container__svg').length) {
+    var svg4 = new Walkway({
+      selector: '#animation',
+      duration: 2500
+    }).draw();
+  }
 
 });
