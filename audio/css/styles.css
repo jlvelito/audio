@@ -1,0 +1,12 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: "Proxima Nova Lt";
+  color: #000; }
+
+h1, .upperbold {
+  font-family: "Futura PT Bold";
+  font-weight: normal; }
+
+h2, h3, h4, h5, h6 {
+  font-weight: normal; }

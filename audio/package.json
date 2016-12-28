@@ -1,0 +1,26 @@
+{
+  "name": "audio-project",
+  "version": "1.0.0",
+  "description": "Audio project for my own tastes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlvelito/audio.git"
+  },
+  "keywords": [
+    "audio"
+  ],
+  "author": "Luis Velito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlvelito/audio/issues"
+  },
+  "homepage": "https://github.com/jlvelito/audio#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0"
+  }
+}
