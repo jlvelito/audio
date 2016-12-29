@@ -2,7 +2,7 @@ body, html {
   width: 100%;
   height: 100%;
   font-family: "Proxima Nova Lt";
-  color: #000;
+  color: #252422;
   background: #f3f2f1; }
 
 h1, .upperbold {
@@ -27,6 +27,17 @@ h2, h3, h4, h5, h6, p {
   height: 100%;
   overflow: hidden;
   box-sizing: border-box; }
+  .section__half {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    height: inherit; }
+    .section__half.black {
+      background-color: #252422; }
+    .section__half.unback {
+      background: url(../img/hereitcomes.jpg) no-repeat center center;
+      background-size: cover; }
 
 .initial {
   padding: 0; }
@@ -49,7 +60,12 @@ h2, h3, h4, h5, h6, p {
     width: 300px;
     top: 50%;
     left: 50%;
-    transform: translate(-110%, -50%); }
+    transform: translate(-110%, -50%);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
     @media (max-width: 560px) {
       .initial__contents {
         position: relative;
@@ -59,6 +75,13 @@ h2, h3, h4, h5, h6, p {
         transform: translate(0, 0);
         text-align: center;
         padding-top: 40px; } }
+    .initial__contents.white {
+      color: #fff;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
   .initial__desc {
     line-height: 2.6em;
     font-size: 16px;
@@ -77,7 +100,7 @@ h2, h3, h4, h5, h6, p {
       height: 0;
       width: 0;
       transform: translateX(50%);
-      border-top: 3px solid #000;
+      border-top: 3px solid #252422;
       content: "";
       -webkit-transition: all 0.5s ease 0.5s;
       -moz-transition: all 0.5s ease 0.5s;
@@ -106,6 +129,20 @@ h2, h3, h4, h5, h6, p {
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease; }
+  .initial.active .initial__contents.white .initial__desc {
+    opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .initial.active .initial__contents.white .initial__desc:before {
+      border-color: #fff;
+      -webkit-transition: all 0.5s ease 0.5s;
+      -moz-transition: all 0.5s ease 0.5s;
+      -ms-transition: all 0.5s ease 0.5s;
+      -o-transition: all 0.5s ease 0.5s;
+      transition: all 0.5s ease 0.5s; }
   .initial .container__svg {
     position: absolute;
     width: 500px;
@@ -125,7 +162,77 @@ h2, h3, h4, h5, h6, p {
         transform: translate(-50%, 0); } }
     .initial .container__svg .wire-wrapper, .initial .container__svg .wire-wrapper-2 {
       fill: none;
-      stroke: #000;
+      stroke: #252422;
       stroke-width: 2;
       width: 100%;
-      max-height: 100%; }
+      max-height: 100%;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+      .initial .container__svg .wire-wrapper.white, .initial .container__svg .wire-wrapper-2.white {
+        stroke: #fff;
+        stroke-width: 3;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/hereitcomes.jpg) no-repeat center center;
+  background-size: cover;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .background.white {
+    opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  transform: translateY(-100%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1200;
+  color: #fff; }
+  header h1 {
+    font-size: 40px;
+    padding: 0 30px;
+    line-height: inherit; }
+    header h1 span.normalText {
+      display: inline-block;
+      font-family: "Proxima Nova Lt";
+      font-size: 18px;
+      text-transform: uppercase;
+      line-height: inherit;
+      margin-left: 6px;
+      vertical-align: middle; }
+  header.visible {
+    transform: translateY(0);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }

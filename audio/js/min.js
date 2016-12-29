@@ -20,6 +20,17 @@ $(document).ready(function() {
   //   mySound.pause();
   // });
 
+  var height = $(window).height();
+
+  $(window).scroll(function() {
+    var way = $(window).scrollTop();
+    if (way >= height) {
+      $('header').addClass('visible');
+    } else {
+      $('header').removeClass('visible');
+    }
+  });
+
   var mySoundInit = new Audio('files/flick.wav');
 
 
@@ -41,13 +52,18 @@ $(document).ready(function() {
 
   $('.container__svg').on('click', function() {
     mySoundInit.play();
+    // $('.initial__contents, .wire-wrapper, .wire-wrapper-2, .background')
+    //   .addClass(
+    //     'white');
   });
 
 });
 
-$(document).load(function() {
-  setTimeout(function() {
-    // Hide the address bar!
-    window.scrollTo(0, 1);
-  }, 0);
-});
+// $(window).load(function() {
+//   setTimeout(function() {
+//     // Hide the address bar!
+//     $("html, body").animate({
+//       scrollTop: 100
+//     }, 10);
+//   }, 0);
+// });
